@@ -1,0 +1,192 @@
+/* Base Styles */
+:root {
+    --primary-dark: #1A1A1A;
+    --primary: #333333;
+    --secondary: #4D4D4D;
+    --accent: #666666;
+    --light: #F5F5F5;
+    --text-dark: #212121;
+    --text-light: #FFFFFF;
+    --transition: all 0.3s ease;
+    --border-radius: 4px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #FFFFFF;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .section {
+    padding: 8rem 0;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+  }
+  
+  .section-header p {
+    font-size: 1.8rem;
+    color: var(--secondary);
+  }
+  
+  .bg-light {
+    background-color: var(--light);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+  }
+  
+  .btn-light {
+    background-color: var(--text-light);
+    color: var(--primary-dark);
+  }
+  
+  .btn-light:hover {
+    background-color: var(--light);
+  }
+  
+  .btn-text {
+    color: var(--primary-dark);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn-text i {
+    margin-left: 0.8rem;
+    transition: var(--transition);
+  }
+  
+  .btn-text:hover {
+    color: var(--primary);
+  }
+  
+  .btn-text:hover i {
+    transform: translateX(4px);
+  }
+  
+  /* Import component styles */
+  @import url('components/header.css');
+  @import url('components/footer.css');
+  @import url('components/slider.css');
+  @import url('components/cards.css');
+  @import url('components/forms.css');
+  
+  /* Import page styles */
+  @import url('pages/home.css');
+  @import url('pages/products.css');
+  @import url('pages/solutions.css');
+  @import url('pages/services.css');
+  @import url('pages/about.css');
+  @import url('pages/resources.css');
+  @import url('pages/contact.css');
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 58%;
+    }
+    
+    .section {
+      padding: 6rem 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    html {
+      font-size: 55%;
+    }
+    
+    .section {
+      padding: 4rem 0;
+    }
+    
+    .section-header h2 {
+      font-size: 3rem;
+    }
+  }
